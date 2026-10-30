@@ -42,3 +42,7 @@ O modelo 3D é ilustrativo e não corresponde a CAD oficial ou a uma representa�
 - Revisão independente: os três problemas identificados de composição móvel e inicialização foram corrigidos e classificados como resolvidos.
 
 As capturas atuais usam o prefixo `v3-` em `evidence/`. Os arquivos de referência e backups locais não são distribuídos no repositório. Não há uso de API paga.
+
+## GitHub Pages
+
+A publicação usa `.github/workflows/deploy.yml`: instala dependências, compila com Vite e publica somente `dist`. Em Settings → Pages, a origem deve ser **GitHub Actions**. O build no Actions usa a base `/Relogio-responsivo/`; o desenvolvimento local continua na raiz.

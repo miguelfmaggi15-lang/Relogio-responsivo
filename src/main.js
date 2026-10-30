@@ -219,9 +219,9 @@ const refs=[
   ['movement','Movimento real','Fotografia do calibre Rolex 3230 com a caixa aberta','Referência real do calibre; a versão 3D é uma reconstrução artística.','swiss'],
 ];
 const sourceURLs={swiss:'https://www.swisswatchexpo.com/watches/rolex-oyster-perpetual-41-steel-black-dial-mens-watch-124300-box-card-81693/',watchclub:'https://www.watchclub.com/rolex/oyster-perpetual/124300-box-and-certificate-ref-124300-year-2022'};
-$('#reference-list').innerHTML=refs.map(([id,title],i)=>`<button data-ref="${id}" aria-pressed="${i===0}"><img src="/assets/reference/${id}.jpg" alt="" loading="lazy"/><span>${title}</span></button>`).join('');
+$('#reference-list').innerHTML=refs.map(([id,title],i)=>`<button data-ref="${id}" aria-pressed="${i===0}"><img src="${import.meta.env.BASE_URL}assets/reference/${id}.jpg" alt="" loading="lazy"/><span>${title}</span></button>`).join('');
 document.querySelectorAll('[data-ref]').forEach(b=>b.addEventListener('click',()=>{
-  const [id,,alt,caption,source]=refs.find(r=>r[0]===b.dataset.ref);$('#reference-image').src=`/assets/reference/${id}.jpg`;$('#reference-image').alt=alt;$('#reference-caption').textContent=caption;$('#reference-source').href=sourceURLs[source];document.querySelectorAll('[data-ref]').forEach(n=>n.setAttribute('aria-pressed',String(n===b)));
+  const [id,,alt,caption,source]=refs.find(r=>r[0]===b.dataset.ref);$('#reference-image').src=`${import.meta.env.BASE_URL}assets/reference/${id}.jpg`;$('#reference-image').alt=alt;$('#reference-caption').textContent=caption;$('#reference-source').href=sourceURLs[source];document.querySelectorAll('[data-ref]').forEach(n=>n.setAttribute('aria-pressed',String(n===b)));
 }));
 
 function updateModel(){
@@ -257,7 +257,7 @@ async function lighting(){
   keyLight=new THREE.DirectionalLight('#f4f7ff',2);keyLight.position.set(-4,6,7);scene.add(keyLight);
   fillLight=new THREE.DirectionalLight('#dce8df',.7);fillLight.position.set(4,-1,5);scene.add(fillLight);
   const pmrem=new THREE.PMREMGenerator(renderer);
-  try{const hdr=await new HDRLoader().loadAsync('/assets/environment/studio_small_03_1k.hdr');hdr.mapping=THREE.EquirectangularReflectionMapping;environment=pmrem.fromEquirectangular(hdr);hdr.dispose();}
+  try{const hdr=await new HDRLoader().loadAsync(`${import.meta.env.BASE_URL}assets/environment/studio_small_03_1k.hdr`);hdr.mapping=THREE.EquirectangularReflectionMapping;environment=pmrem.fromEquirectangular(hdr);hdr.dispose();}
   catch(error){
     const room=new THREE.Scene();room.background=new THREE.Color('#343b3e');
     for(const x of [-1,1]){const panel=new THREE.Mesh(new THREE.PlaneGeometry(3,9),new THREE.MeshBasicMaterial({color:new THREE.Color(3,3,3),side:THREE.DoubleSide}));panel.position.set(x*5,2,4);panel.lookAt(0,0,0);room.add(panel);}
