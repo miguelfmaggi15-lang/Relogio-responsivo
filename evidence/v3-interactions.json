@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "name": "Introduction restored",
+      "pass": true
+    },
+    {
+      "name": "Seven selectable components",
+      "pass": true
+    },
+    {
+      "name": "Continuous explosion at50percent",
+      "pass": true
+    },
+    {
+      "name": "Independent component selection",
+      "pass": true
+    },
+    {
+      "name": "Three-axis component positioning",
+      "pass": true
+    },
+    {
+      "name": "Other parts remain in place",
+      "pass": true
+    },
+    {
+      "name": "Focus changes the camera",
+      "pass": true
+    },
+    {
+      "name": "Isolate hides all other components",
+      "pass": true
+    },
+    {
+      "name": "Isolation follows a new selection",
+      "pass": true
+    },
+    {
+      "name": "Keyboard can move a selected piece",
+      "pass": true
+    },
+    {
+      "name": "Selected piece resets independently",
+      "pass": true
+    },
+    {
+      "name": "Restore all components",
+      "pass": true
+    },
+    {
+      "name": "Lighting selection works",
+      "pass": true
+    },
+    {
+      "name": "Reset restores all positions",
+      "pass": true
+    },
+    {
+      "name": "Demo pause holds the composition",
+      "pass": true
+    },
+    {
+      "name": "Twelve-second demo completes",
+      "pass": true
+    },
+    {
+      "name": "All seven real reference images load",
+      "pass": true
+    },
+    {
+      "name": "Gallery links directly to source",
+      "pass": true
+    },
+    {
+      "name": "Viewing guide opens",
+      "pass": true
+    },
+    {
+      "name": "No horizontal page overflow",
+      "pass": true
+    },
+    {
+      "name": "WebGL remains available",
+      "pass": true
+    }
+  ],
+  "render": {
+    "calls": 145,
+    "triangles": 784490
+  },
+  "status": "passed",
+  "viewport": [
+    1440,
+    900
+  ]
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.tools/
+*.log
+
+references/
+.impeccable/
+.env
+.env.*
+!.env.example
+evidence/

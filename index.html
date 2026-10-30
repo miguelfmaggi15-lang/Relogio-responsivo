@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#081b16" />
+  <meta name="description" content="Um novo olhar sobre o Oyster Perpetual. Explore, separe e descubra cada detalhe em um atelier 3D interativo." />
+  <title>Oyster Perpetual — Um novo olhar sobre o tempo</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preload" href="/assets/cormorant.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="/assets/montserrat.ttf" as="font" type="font/ttf" crossorigin />
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5M4 4l6 6m10-6-6 6M4 20l6-6m10 6-6-6"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+  <symbol id="i-focus" viewBox="0 0 24 24"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-move" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4m12-8 4 4-4 4"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+  <symbol id="i-gallery" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m4 18 6-5 4 3 3-4 4 5"/></symbol>
+  <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(-35 12 12)"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="5"/></symbol>
+</defs></svg>
+
+<main class="atelier" id="experience" data-screen="intro">
+  <div class="studio-light" aria-hidden="true"></div><div class="studio-floor" aria-hidden="true"></div>
+  <header class="site-header">
+    <button class="brand" id="brand-home" aria-label="Voltar à apresentação">
+      <svg class="brand-crown" viewBox="0 0 72 42" aria-hidden="true"><path d="m12 12 10 21h28l10-21-17 16-7-24-7 24Z"/><ellipse cx="36" cy="36" rx="14" ry="4"/><circle cx="11" cy="10" r="3"/><circle cx="24" cy="5" r="3"/><circle cx="36" cy="3" r="3"/><circle cx="48" cy="5" r="3"/><circle cx="61" cy="10" r="3"/><path d="m24 6 5 22M48 6l-5 22"/></svg>
+      <span>ROLEX</span>
+    </button>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <button id="nav-overview" class="nav-item active" aria-current="page">O relógio</button>
+      <button id="nav-explore" class="nav-item">Explorar em 3D</button>
+      <button id="references-open" class="nav-item">Os detalhes</button>
+    </nav>
+    <button class="help-button" id="help-open" aria-label="Como explorar o relógio"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Como explorar</span></button>
+  </header>
+
+  <section class="editorial" aria-labelledby="title">
+    <h1 id="title">Oyster<br/>Perpetual.</h1>
+    <p class="intro-copy">A essência do tempo.<br/>Sob o seu olhar.</p>
+    <button class="primary-action" id="explore-start"><span>Explorar livremente</span><svg><use href="#i-arrow"/></svg></button>
+    <button class="intro-demo" id="intro-demo"><span class="small-play"><svg><use href="#i-play"/></svg></span>Uma viagem por dentro</button>
+    <p class="product-signature">41 mm <span aria-hidden="true">/</span> Oystersteel <span aria-hidden="true">/</span> Mostrador preto</p>
+  </section>
+
+  <h1 class="sr-only" id="explore-title" hidden>Atelier interativo Oyster Perpetual</h1>
+
+  <div class="scene-caption" aria-hidden="true"><span>Oyster Perpetual 41</span><span>Uma perspectiva sem limites.</span></div>
+  <div class="watch-viewport" id="watch-viewport" tabindex="0" role="img" aria-label="Modelo 3D interativo do Rolex Oyster Perpetual preto e prateado" aria-describedby="keyboard-guide">
+    <div class="loading" id="loading"><div class="loading-orbit"></div><span>Preparando cada detalhe</span></div>
+    <img class="fallback" src="/assets/rolex-original.png" alt="Fotografia frontal do Rolex Oyster Perpetual" hidden/>
+  </div>
+
+  <aside class="parts-rail explore-only" aria-label="Componentes do relógio">
+    <span class="rail-heading">Um universo de detalhes</span>
+    <div id="parts-list"></div>
+  </aside>
+
+  <aside class="inspector explore-only" aria-labelledby="part-title">
+    <div class="inspector-top"><span id="part-material">Oystersteel</span><span class="selection-dot" aria-hidden="true"></span><button id="inspector-toggle" aria-expanded="false" aria-label="Mostrar ou recolher ajustes da peça">Ajustes <span aria-hidden="true">+</span></button></div>
+    <h2 id="part-title">A caixa Oyster.</h2>
+    <p id="part-description">Escolha uma peça no relógio ou na lista para descobrir um novo ponto de vista.</p>
+    <div class="part-actions">
+      <button id="focus-part"><svg><use href="#i-focus"/></svg><span>Focar</span></button>
+      <button id="isolate-part" aria-pressed="false"><svg><use href="#i-eye"/></svg><span>Isolar</span></button>
+      <button id="move-part" aria-pressed="false"><svg><use href="#i-move"/></svg><span>Mover</span></button>
+    </div>
+    <details class="position-details" id="position-details"><summary>Ajustar posição <span aria-hidden="true">+</span></summary>
+      <div class="position-sliders">
+        <label for="offset-x">Lateral <output id="offset-x-value">0</output></label><input type="range" id="offset-x" min="-4" max="4" step="0.05" value="0"/>
+        <label for="offset-y">Altura <output id="offset-y-value">0</output></label><input type="range" id="offset-y" min="-4" max="4" step="0.05" value="0"/>
+        <label for="offset-z">Profundidade <output id="offset-z-value">0</output></label><input type="range" id="offset-z" min="-4" max="4" step="0.05" value="0"/>
+        <button id="reset-part">Restaurar esta peça</button>
+      </div>
+    </details>
+    <p class="inspector-tip" id="inspector-tip">Dê dois cliques em uma peça para vê-la de perto.</p>
+  </aside>
+
+  <div class="scene-tools" role="group" aria-label="Ajustes da visualização">
+    <div class="view-presets" role="group" aria-label="Ângulos do relógio">
+      <button data-angle="front" title="Vista frontal">Frente</button><button data-angle="side" title="Perfil e coroa">Perfil</button><button data-angle="back" title="Verso e pulseira">Verso</button>
+    </div>
+    <div class="light-picker"><svg aria-hidden="true"><use href="#i-sun"/></svg><label class="sr-only" for="studio-light">Iluminação do relógio</label><select id="studio-light"><option value="atelier">Luz de estúdio</option><option value="cool">Luz fria</option><option value="warm">Luz quente</option></select></div>
+  </div>
+
+  <section class="control-dock" aria-label="Controles da experiência">
+    <button class="explode-toggle" id="explode-toggle" aria-pressed="false"><svg><use href="#i-layers"/></svg><span>Desconstruir</span></button>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <div class="explosion-control"><label for="explosion">Separação das peças <output id="explosion-value">0%</output></label><input id="explosion" type="range" min="0" max="100" step="1" value="0" aria-label="Separação das peças"/></div>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <button class="demo-button" id="demo-button" aria-pressed="false"><svg class="play-icon"><use href="#i-play"/></svg><svg class="pause-icon"><use href="#i-pause"/></svg><span id="demo-label">Ver a montagem</span></button>
+    <button class="reset-button" id="reset-all" aria-label="Restaurar relógio, peças e câmera" title="Restaurar tudo"><svg><use href="#i-reset"/></svg></button>
+    <div class="demo-progress" aria-hidden="true"><span id="demo-progress"></span></div>
+  </section>
+  <div class="camera-tools" role="group" aria-label="Zoom e rotação"><button id="rotate-left" aria-label="Girar para a esquerda"><svg class="flipped"><use href="#i-chevron"/></svg></button><button id="zoom-out" aria-label="Afastar câmera">−</button><button id="zoom-in" aria-label="Aproximar câmera">+</button><button id="rotate-right" aria-label="Girar para a direita"><svg><use href="#i-chevron"/></svg></button></div>
+  <footer class="site-footer"><p id="gesture-hint"><svg aria-hidden="true"><use href="#i-orbit"/></svg><span>Arraste para girar. Aproxime para descobrir.</span></p><span>Um estudo independente sobre o tempo.</span></footer>
+  <p class="sr-only" id="view-status" role="status" aria-live="polite">Relógio montado, pronto para explorar.</p>
+  <p class="sr-only" id="keyboard-guide">Use as setas para girar a câmera, + e − para zoom e Home para restaurar. Ative Mover para deslocar a peça selecionada com as setas; os controles de posição também ajustam a profundidade.</p>
+</main>
+
+<dialog class="guide-dialog" id="guide" aria-labelledby="guide-title"><button class="dialog-close" id="help-close" aria-label="Fechar guia"><svg><use href="#i-close"/></svg></button>
+  <svg class="guide-symbol" aria-hidden="true"><use href="#i-orbit"/></svg><h2 id="guide-title">O tempo, em suas mãos.</h2>
+  <p>Não existe um único caminho. Gire o relógio, separe suas camadas e demore-se no detalhe que mais chama sua atenção.</p>
+  <dl><dt>Olhe de qualquer ângulo</dt><dd>Arraste para girar. Use a roda ou uma pinça para aproximar. Com o mouse, o botão direito desloca a câmera.</dd><dt>Descubra cada peça</dt><dd>Clique no modelo ou escolha um componente na lista. Dois cliques, ou o botão Focar, aproximam a câmera da peça.</dd><dt>Crie sua própria composição</dt><dd>Use Isolar para ver só uma peça. Ative Mover e arraste-a livremente; em Ajustar posição, controle também sua profundidade.</dd><dt>Prefere o teclado?</dt><dd>Foque o relógio com Tab. As setas giram; + e − aproximam e afastam. Em Mover, as setas deslocam a peça. Home restaura a experiência.</dd></dl>
+  <p class="model-note">Experiência independente, sem vínculo com a Rolex. O relógio e seu mecanismo 3D são reconstruções artísticas; as fotografias da galeria são referências reais.</p>
+</dialog>
+
+<dialog class="reference-dialog" id="references" aria-labelledby="references-title"><button class="dialog-close" id="references-close" aria-label="Fechar galeria"><svg><use href="#i-close"/></svg></button>
+  <div class="reference-heading"><h2 id="references-title">Um olhar mais próximo.</h2><p>Fotografias reais que orientam cada detalhe.</p></div>
+  <div class="reference-layout"><figure class="reference-photo"><img id="reference-image" src="/assets/reference/angle.jpg" alt="Rolex Oyster Perpetual visto em três quartos"/><figcaption id="reference-caption">Caixa polida, mostrador preto e pulseira Oyster.</figcaption></figure>
+  <div class="reference-sidebar"><div id="reference-list" class="reference-list" role="group" aria-label="Escolher fotografia de referência"></div><a id="reference-source" href="https://www.swisswatchexpo.com/watches/rolex-oyster-perpetual-41-steel-black-dial-mens-watch-124300-box-card-81693/" target="_blank" rel="noreferrer">Ver fotografia na fonte <svg><use href="#i-arrow"/></svg></a><p>As imagens pertencem aos respectivos autores. O movimento 3D é ilustrativo.</p></div></div>
+</dialog>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
