@@ -45,4 +45,6 @@ As capturas atuais usam o prefixo `v3-` em `evidence/`. Os arquivos de referênc
 
 ## GitHub Pages
 
-A publicação usa `.github/workflows/deploy.yml`: instala dependências, compila com Vite e publica somente `dist`. Em Settings → Pages, a origem deve ser **GitHub Actions**. O build no Actions usa a base `/Relogio-responsivo/`; o desenvolvimento local continua na raiz.
+A publicação usa o build pronto na pasta `docs`, versionado neste repositório. Em Settings → Pages, a origem é Deploy from a branch, branch `main`, pasta `/docs`.
+
+Após alterar o site, execute `npm run build:pages` e inclua `docs` no mesmo commit do código. O comando ajusta a base `/Relogio-responsivo/`. O workflow valida o build; o Pages publica a pasta compilada. O desenvolvimento local continua na raiz.
